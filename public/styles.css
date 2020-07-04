@@ -105,8 +105,7 @@ header {
 
 /* tira a linha do ultimo elemento do box principal*/
 .details .item:last-child {
-    border: none;
-
+    border-top: none;
 }
 
 .details h3,

@@ -4,7 +4,7 @@ const routes = require('./routes')
 
 const server = express()
 
-
+server.use(express.urlencoded({ extended: true}))//faz funcionar o req.body  na route
 server.use(express.static('public'))
 server.use(routes)
 
