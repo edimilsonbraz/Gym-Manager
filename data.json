@@ -1,3 +1,31 @@
 {
-  "instructors": []
+  "instructors": [
+    {
+      "id": 1,
+      "avatar_url": "http://google.com",
+      "name": "Edimilson Braz",
+      "birth": 447465600000,
+      "gender": "M",
+      "services": "Musculação, Crossfit",
+      "created_at": 1593863737174
+    },
+    {
+      "id": 2,
+      "avatar_url": "http://google.com",
+      "name": "Leandro Vieira",
+      "birth": 971136000000,
+      "gender": "M",
+      "services": "Crossfit",
+      "created_at": 1593863804187
+    },
+    {
+      "id": 3,
+      "avatar_url": "http://google.com",
+      "name": "Heloisa de Queiroz",
+      "birth": 972345600000,
+      "gender": "M",
+      "services": "Aeróbico",
+      "created_at": 1593863886922
+    }
+  ]
 }

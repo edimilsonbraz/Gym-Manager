@@ -1,13 +1,13 @@
-const fs = require('fs')
+const fs = require('fs') //fire sistem
 const data = require("./data.json")
 //Create
-exports.post = function(req, res) {
+exports.post = function(req, res) {  //responsavel por exportar as funções aqui utilizadas
     //req.query
     
     //req.body
-    const keys = Object.keys(req.body)
+    const keys = Object.keys(req.body) //CRIA UM OBJETO QUE TEM VARIAS FUNÇÕES// CRIOU UM ARRAY DE CHAVES -> { }
 
-    for (key of keys) {
+    for (key of keys) { //PERCORRE O ARRAY DO FORMULARIO
         //req.body.avatar_url == ""
         if (req.body[key] == "") {
             return res.send('Please, fill all fields!')
@@ -19,7 +19,7 @@ exports.post = function(req, res) {
 
     birth = Date.parse(birth)
     const created_at = Date.now()
-    const id = Number(data.instructors.length + 1)
+    id = Number(data.instructors.length + 1)
 
     data.instructors.push({
         id,
