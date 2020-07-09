@@ -1,5 +1,29 @@
 const fs = require('fs') //fire sistem
 const data = require("./data.json")
+const { age, date } = require('./utils')
+
+
+//Show
+exports.show = function(req, res) {
+    //req.params
+    const { id } = req.params
+
+    const foundInstructor = data.instructors.find(function(instructor) {
+        return id == instructor.id
+    })
+
+    if(!foundInstructor) return res.send("instructor not found")
+
+    const instructor = {
+        ...foundInstructor,
+        age: age(foundInstructor.birth),
+        services: foundInstructor.services.split(","), //Método split gera um array separado de virgula
+        created_at: new Intl.DateTimeFormat("pt-BR").format(foundInstructor.created_at),//constructor Intl
+    }
+
+    return res.render("instructors/show", { instructor })
+}
+
 //Create
 exports.post = function(req, res) {  //responsavel por exportar as funções aqui utilizadas
     //req.query
@@ -40,6 +64,22 @@ exports.post = function(req, res) {  //responsavel por exportar as funções aqu
     // return res.send(req.body)
 }
 
-// Update
+//edit
+exports.edit =  function(req, res) {
+    //req.params
+    const { id } = req.params
 
-// Delete
+    const foundInstructor = data.instructors.find(function(instructor) {
+        return id == instructor.id
+    })
+
+    if(!foundInstructor) return res.send("instructor not found")
+
+    const instructor = {
+        ...foundInstructor,
+        birth: date(foundInstructor.birth)
+    }
+
+    return res.render("instructors/edit", { instructor })
+}
+
