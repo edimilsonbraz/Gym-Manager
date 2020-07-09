@@ -3,7 +3,7 @@
   <img src="https://ik.imagekit.io/1n1swj1w28/Gym_Manager01_CjfnHZAQB6.png" alt="YOUR_PROJECT_NAME" width="700">
   <br>
 <br>
-  Sistema de Academia - Gym Manager
+  Sistema de Academia - Gym Manager :muscle:
 </h1>
 
 <p align="center">Esse sistema é um Gerenciador de Academias, onde professores e alunos se cadastram pra ter acesso a academia, essa aplicação foi desenvolvida durante o bootcamp LaunchBase da Rocketseat</p>
@@ -14,7 +14,7 @@
   </a>
 </p>
 
-## Features
+## :muscle: Features
 [//]: # (Add the features of your project here:)
 Este aplicativo apresenta algumas das mais recentes ferramentas e práticas em desenvolvimento Front-end
 
