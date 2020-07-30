@@ -8,8 +8,6 @@ module.exports = {
             return res.render("instructors/index", { instructors })
 
         })
-
-
     },
     create(req, res){
         
@@ -39,7 +37,6 @@ module.exports = {
 
             instructor.age = age(instructor.birth)
             instructor.services = instructor.services.split(",")
-
             instructor.created_at = date(instructor.created_at).format
 
             return res.render("instructors/show", { instructor })
@@ -60,7 +57,7 @@ module.exports = {
     put(req, res){
         const keys = Object.keys(req.body) //CRIA UM OBJETO QUE TEM VARIAS FUNÇÕES// CRIOU UM ARRAY DE CHAVES -> { }
 
-    for (key of keys) { //PERCORRE O ARRAY DO FORMULARIO
+    for (key of keys) { 
         if (req.body[key] == "") {
             return res.send('Please, fill all fields!')
         }
