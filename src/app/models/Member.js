@@ -127,7 +127,7 @@ module.exports = {
 
            if ( filter ) {
             flterQuery = `
-            WHERE members.name ILIKE '%${filter}%
+            WHERE members.name ILIKE '%${filter}%'
             OR members.email ILIKE '%${filter}%'
             `
 

@@ -121,8 +121,8 @@ module.exports = {
 
 
            if ( filter ) {
-            flterQuery = `
-            WHERE instructors.name ILIKE '%${filter}%
+            filterQuery = `
+            WHERE instructors.name ILIKE '%${filter}%'
             OR instructors.services ILIKE '%${filter}%'
             `
 
